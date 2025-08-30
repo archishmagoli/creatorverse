@@ -1,3 +1,3 @@
-export const ViewCreator = (props) => {
+export const ViewCreator = () => {
     
 }

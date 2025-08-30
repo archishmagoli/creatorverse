@@ -1,3 +1,3 @@
-export const EditCreator = (props) => {
+export const EditCreator = () => {
     
 }

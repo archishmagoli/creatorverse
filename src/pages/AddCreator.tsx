@@ -1,3 +1,3 @@
-export const AddCreator = (props) => {
-    
+export const AddCreator = () => {
+
 }
