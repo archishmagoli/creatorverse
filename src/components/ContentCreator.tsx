@@ -1,17 +1,26 @@
+import { Link } from "react-router-dom";
+
 export const ContentCreator = (props: CreatorAttributes) => {
     return (
-        <>
-            <p>Name: {props.name}</p>
-            <p>Description: {props.description}</p>
-            <p>Link to page: {props.url}</p>
-            <p>ImageURL: {props.imageURL || 'hi'}</p>
-        </>
+        <div className='creatorDetail' key={props.id}>
+            <h2><b>{props.name}</b></h2>
+            {props.image_url ? <img className='creatorImage' src={props.image_url}></img>:<></>}
+            <p>{props.description}</p>
+            <br></br>
+            <Link to={"/creator/" + props.id + '/edit'}>
+                <button className='button button-info'>
+                    Edit Creator Details
+                </button>
+            </Link>
+            <br></br>
+        </div>
     )
 }
 
 export interface CreatorAttributes {
+    id: number;
     name: string;
     description: string;
     url: string;
-    imageURL?: string;
+    image_url?: string;
 }

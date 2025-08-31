@@ -2,6 +2,7 @@ import { supabase } from '../client';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import type { CreatorAttributes } from '../components/ContentCreator';
+import { ContentCreator } from '../components/ContentCreator';
 
 export const ShowCreators = () => {
     /* State is used to maintain the 
@@ -29,7 +30,7 @@ export const ShowCreators = () => {
             {
                 creators.length === 0 ?
                 <div>
-                    <h2>No creators yet!</h2>
+                    <h2>No Creators Yet!</h2>
                     <Link to="/add-creator">
                         <button className='button button-detail'>
                         Add a new Creator here!
@@ -37,11 +38,25 @@ export const ShowCreators = () => {
                     </Link>
                 </div>
                 :
-                <div>
-                    <p>Coming soon...</p>
-                </div>
+                creators.map(creator =>
+                    <div key={creator.id} className='creatorCard'>
+                        <ContentCreator {...creator} />
+                        <br />
+                        <Link to={"/creator/" + creator.id}>
+                            <button className='button button-detail'>
+                                View Creator
+                            </button>
+                        </Link>
+                    </div>
+                    )
             }
-        </div>
+            </div>
+            <br></br>
+            <Link to="/add-creator">
+                <button className='button button-detail'>
+                    Add a New Creator
+                </button>
+            </Link>
         </>
     )
 }

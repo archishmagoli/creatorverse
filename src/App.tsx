@@ -1,6 +1,9 @@
 import { useRoutes } from 'react-router-dom'
 import './App.css'
 import { ShowCreators } from './pages/ShowCreators';
+import { AddCreator } from './pages/AddCreator';
+import { ViewCreator } from './pages/ViewCreator';
+import { EditCreator } from './pages/EditCreator';
 
 function App() {
   let element = useRoutes([
@@ -8,6 +11,18 @@ function App() {
       path: "/",
       element: <ShowCreators />,
     },
+    {
+      path: "/add-creator",
+      element: <AddCreator />,
+    },
+    {
+      path: '/creator/:id',
+      element: <ViewCreator />,
+    },
+    {
+      path: '/creator/:id/edit',
+      element: <EditCreator />
+    }
   ]);
 
   return element;
