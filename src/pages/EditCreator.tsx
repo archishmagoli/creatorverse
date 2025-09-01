@@ -43,6 +43,7 @@ export const EditCreator = () => {
             .from('creators')
             .update({ 
                 name: creator.name,
+                description: creator.description,
                 url: creator.url,
                 image_url: creator.image_url || ''
                 })
