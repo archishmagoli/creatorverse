@@ -23,11 +23,10 @@ The following **optional** features are implemented:
 - [X] An image of each content creator is shown on their content creator card
 
 ## Video Walkthrough
-Here's a walkthrough of implemented required features:
-👉🏿<img src='https://drive.google.com/file/d/1cZESifcGfTOVhZB8JZXgETEHiqis89EH/view?usp=sharing' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[Here's a walkthrough](https://drive.google.com/file/d/1cZESifcGfTOVhZB8JZXgETEHiqis89EH/view?usp=sharing) of implemented required features.
 
 ## Notes
-I had a great time brushing up my web development skills!
+I had a great time brushing up on my web development skills!
 
 ## License
 
