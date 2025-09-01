@@ -1,0 +1,181 @@
+@use "sass:map";
+@use "@picocss/pico/scss/pico" as * with (
+  $theme-color: "zinc",
+  $semantic-root-element: "#root",
+  $enable-semantic-container: true,
+  $enable-classes: false
+);
+
+#root {
+  > main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: map.get(map.get($breakpoints, "sm"), "viewport");
+    padding-bottom: 4em;
+  }
+}
+
+.btn-container {
+    padding-bottom: 3em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form {
+  background: #01060c;
+  border: 2px solid #fff;
+  border-radius: 1em;
+  padding: 2em 2em 1em 2em;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  margin: 2em auto;
+  max-width: 50%;
+}
+
+.gallery-header {
+  width: 100%;
+  height: 50%;
+  min-height: 15rem;
+  background: url('https://time.com/wp-content/uploads/2017/10/229-westerlund-21.jpg?w=2000') center/cover no-repeat;
+  padding: 4em 0 3em 0;
+  display: flex;
+  border-bottom: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-header-box {
+  background: rgba(40, 40, 40, 0.7);
+  border-radius: 1.5em;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  padding: 2em 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery-header {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 1em 4em rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 4 columns, like spreadsheet cells
+  gap: 5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 5em;
+  align-items: stretch;
+  justify-items: center;
+}
+
+.creatorCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  min-width: 15rem;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0 1rem 4rem rgba(0,0,0,0.08);
+  border: 1px solid #fff;
+  overflow: hidden; /* keep overlay inside rounded corners */
+}
+
+.creatorCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom right, #000101, #252628);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.creatorCard > * {
+  position: relative;
+  z-index: 1;             /* content is above overlay */
+  color: #fff;            /* ensure text pops */
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creatorCard button {
+  font-size: 0.85rem;
+  margin-bottom: 1.5em;
+  align-self: center;
+  justify-self: end;
+}
+
+.creatorCard h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: rgb(204, 220, 239);
+}
+
+.creatorCard .description {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 0.5em;
+}
+
+h2, h3 {
+  text-align: center;
+  font-style: italic;
+  margin: 1em;
+}
+
+.button {
+    padding: 0.5em;
+    border: 1px solid white;
+}
+
+#solo-creator { 
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#view-creator {
+    background-color: rgb(28, 28, 149);
+}
+
+#edit-creator {
+    background-color: rgb(0, 96, 107);
+}
+
+#add-creator {
+    background-color: rgb(0, 107, 34);
+}
+
+.back-to-gallery {
+    background-color: rgb(66, 2, 92);
+}
+
+#delete-creator {
+    background-color: rgb(153, 1, 1);
+}
+
+#profile-link {
+    color: rgb(164, 214, 244);
+}

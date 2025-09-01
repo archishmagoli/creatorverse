@@ -1,5 +1,4 @@
 import { useRoutes } from 'react-router-dom'
-import './App.css'
 import { ShowCreators } from './pages/ShowCreators';
 import { AddCreator } from './pages/AddCreator';
 import { ViewCreator } from './pages/ViewCreator';

@@ -64,7 +64,7 @@ export const EditCreator = () => {
         <div>
             { !creator ? <p>Loading...</p> :
             <div className="content">
-                <h1>Edit Creator</h1>
+                <h2>Edit Creator</h2>
                 <form className='form' onSubmit={handleSubmit}>
                     <label htmlFor="name">Creator Name: </label>
                     <input type="text" id="name" name="name" value={creator.name} onChange={handleChange} required />
@@ -88,6 +88,7 @@ export const EditCreator = () => {
 
                     <input className='button button-submit' type="submit" value="Submit" />
                 </form>
+                <div className='btn-container'><button className='button back-to-gallery' onClick={() => navigate('/')}>Back to Gallery</button></div>
             </div>
             }
         </div>

@@ -3,16 +3,21 @@ import { Link } from "react-router-dom";
 export const ContentCreator = (props: CreatorAttributes) => {
     return (
         <div className='creatorDetail' key={props.id}>
-            <h2><b>{props.name}</b></h2>
-            {props.image_url ? <img className='creatorImage' src={props.image_url}></img>:<></>}
-            <p>{props.description}</p>
-            <br></br>
-            <Link to={"/creator/" + props.id + '/edit'}>
-                <button className='button button-info'>
-                    Edit Creator Details
-                </button>
-            </Link>
-            <br></br>
+            {props.image_url && (
+                <div className="creatorDetail-overlay" />
+            )}
+            <div className="creatorDetail-content">
+                <h3>{props.name}</h3>
+                <p className="description">{props.description}</p>
+                <a href={props.url} id="profile-link">Link to Profile</a>
+                <br />
+                <br />
+                <Link to={"/creator/" + props.id + '/edit'}>
+                    <button className='button' id="edit-creator">
+                        Edit Creator Details
+                    </button>
+                </Link>
+            </div>
         </div>
     )
 }

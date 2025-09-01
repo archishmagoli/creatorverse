@@ -52,16 +52,19 @@ export const ViewCreator = () => {
         <div>
             {creator !== undefined ? (
                 <>
-                    <div className='creatorDetail' key={creator.id}>
-                        <div key={creator.id} className='creatorCard'>
+                <div id="solo-creator">
+                    <div className='creatorCard' key={creator.id} style={creator?.image_url
+                        ? { backgroundImage: `url(${creator.image_url})`, backgroundPosition: 'center', backgroundSize: 'cover' }
+                        : {}}>
+                        <div key={creator.id}>
                             <ContentCreator {...creator} />
-                            <br />
                             <Link to={"/creator/" + creator.id}></Link>
+                            <button className='button' id="delete-creator" onClick={deleteCreator}>Delete Creator</button>
                         </div>
-                        <button className='button button-danger' onClick={deleteCreator}>Delete Creator</button>
                     </div>
                     <br></br>
-                    <button className='button button-info' onClick={() => navigate('/')}>Back to Gallery</button>
+                </div>
+                <div className='btn-container'><button className='button back-to-gallery' onClick={() => navigate('/')}>Back to Gallery</button></div>
                 </>
                 
             ) : (

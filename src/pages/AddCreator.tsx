@@ -1,4 +1,3 @@
-import '../App.css';
 import { supabase } from '../client';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -51,7 +50,7 @@ export const AddCreator = () => {
 
     return (
         <div>
-            <h1>Add a New Creator!</h1>
+            <h2>Add a New Creator!</h2>
             <form className='form' onSubmit={handleSubmit}>
                 <label htmlFor="name">Creator Name: </label>
                 <input type="text" id="name" name="name" value={creator.name} onChange={handleChange} required />
@@ -63,7 +62,7 @@ export const AddCreator = () => {
                 
                 <br /><br />
 
-                <label htmlFor="url">Profile URL: </label>
+                <label htmlFor="url">Profile URL (Instagram, YouTube, etc.): </label>
                 <input type="url" id="url" name="url" value={creator.url} onChange={handleChange} required />
 
                 <br /><br />
@@ -75,6 +74,7 @@ export const AddCreator = () => {
 
                 <input className='button button-submit' type="submit" value="Submit" />
             </form>
+            <div className='btn-container'><button className='button back-to-gallery' onClick={() => navigate('/')}>Back to Gallery</button></div>
         </div>
         
     );
