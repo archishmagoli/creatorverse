@@ -24,15 +24,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 Here's a walkthrough of implemented required features:
-
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 GIF tool here
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+👉🏿<img src='https://drive.google.com/file/d/1cZESifcGfTOVhZB8JZXgETEHiqis89EH/view?usp=sharing' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 I had a great time brushing up my web development skills!
