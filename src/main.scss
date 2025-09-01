@@ -68,11 +68,9 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // 4 columns, like spreadsheet cells
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 5em;
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 5em;
+  padding: 0 5em 5em;
   align-items: stretch;
   justify-items: center;
 }
@@ -134,7 +132,7 @@
 
 .creatorCard .description {
   font-style: italic;
-  color: #888;
+  color: #ffffff;
   margin-bottom: 0.5em;
 }
 
