@@ -26,7 +26,7 @@ export const AddCreator = () => {
         e.preventDefault();
     
         try {
-            const { data, error } = await supabase
+            const { error } = await supabase
                 .from('creators')
                 .insert({
                     name: creator.name, 
